@@ -12,7 +12,6 @@ export const users = pgTable(
     lastName: t.varchar("last_name", { length: 256 }),
     email: t.varchar().notNull(),
     invitee: t.integer().references((): AnyPgColumn => users.id),
-    role: rolesEnum().default("guest"),
   },
   (table: { email: SQL<unknown> | Partial<t.ExtraConfigColumn<ColumnBaseConfig<ColumnDataType, string>>>; }) => {
     return {
