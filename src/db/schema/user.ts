@@ -3,7 +3,6 @@ import { AnyPgColumn } from "drizzle-orm/pg-core";
 import { pgEnum, pgTable, uniqueIndex  } from "drizzle-orm/pg-core";
 import * as t from "drizzle-orm/pg-core";
 
-export const rolesEnum = pgEnum("roles", ["guest", "user", "admin"]);
 
 export const users = pgTable(
   "users",
